@@ -16,7 +16,19 @@
  * @returns {(number|undefined)}
  */
 function getWinner(points) {
-    return undefined;
+    let commandOne = 0
+    let commandTwo = 0
+    for (const point of points) {
+
+        commandOne += Number(point[0] + point[1])
+        commandTwo += Number(point[3] + point[4])
+    }
+    console.log(commandOne,'commandOne')
+    console.log(commandTwo,'commandTwo')
+    return commandTwo > commandOne ? 2 : commandTwo === commandOne  ? undefined : 1
 }
 
 module.exports = getWinner;
+
+
+console.log(getWinner(['36-18', '22-31', '27-21', '19-34']))
