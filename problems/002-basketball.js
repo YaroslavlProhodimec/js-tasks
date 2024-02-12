@@ -15,6 +15,7 @@
  * @param {string[]} points
  * @returns {(number|undefined)}
  */
+
 function getWinner(points) {
     let commandOne = 0
     let commandTwo = 0
