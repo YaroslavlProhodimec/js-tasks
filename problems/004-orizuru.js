@@ -18,8 +18,24 @@
  * @returns {number[]} массив чисел, где первый элемент это количество журавликов сделанных Петей,
  * второй элемент – Катей, третий – Сережей
  */
+
+
+
 function computeOrizurus(total) {
-    return undefined;
+    // p + p + 4p = total
+    // 6p = total
+    // p = total / 6
+    const p = total / 6;
+    const pete = p;
+    const kate = 4 * p;
+    const sergo = p;
+
+    return [pete, kate, sergo];
+
+
 }
 
+console.log(computeOrizurus(6))
+console.log(computeOrizurus(24))
+console.log(computeOrizurus(60))
 module.exports = computeOrizurus;
